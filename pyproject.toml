@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qis"
+version = "0.1.0"
+description = "QIS data API client: club market data as pandas or polars DataFrames"
+requires-python = ">=3.9"
+dependencies = ["httpx", "pyarrow", "pandas"]
+
+[project.optional-dependencies]
+polars = ["polars"]
+
+[tool.setuptools]
+packages = ["qis"]
